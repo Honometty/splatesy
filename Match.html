@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ページの概要文を記載します">
+  <script src="./js/toggle-menu.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/match.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@500&display=swap" rel="stylesheet">
+  <title>Splatesy</title>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- ver.1.1.0 ではコメントアウト -->
+      <!-- <a class="header-logo" href="./index.html"> -->
+      <a class="header-logo" href="./Match.html">
+        <img src="./image/common/header-icon.png" alt="Splatesy">
+      </a>
+      <button class="toggle-menu-button"></button>
+      <div class="header-site-menu">
+        <nav class="site-menu">
+          <ul>
+            <!-- ver.1.0.0 ではコメントアウト -->
+            <!-- <li><a href="./spatesy.html">Splatesy</a></li>
+            <li><a href="./Match.html">Online<br>Schedule</a></li>
+            <li><a href="./Salmon.html">Salmon<br>Run</a></li>
+            <li><a href="./gesotown.html">Geso<br>Town</a></li> -->
+            <li><a onclick="pop_up();">Splatesy</a></li>
+            <li><a href="./Match.html">Online<br>Schedule</a></li>
+            <li><a onclick="pop_up();">Salmon<br>Run</a></li>
+            <li><a onclick="pop_up();">Geso<br>Town</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- メイン -->
+  <main class="main">
+    <div class="first-view">
+      <div class="first-view-title">
+        <h1>Online Match Schedule</h1>
+      </div>
+    </div>
+
+    <!-- ナワバリバトル -->
+    <div class="nawabari">
+      <div class="mode">
+        <h2><span class="title">Nawabari Battle</span></h2>
+        <img src="./image/rule/nawabari.png" alt="nawabari">
+      </div>
+
+      <!-- ステージ情報 -->
+      <div class="info">
+        <div class="First">
+          <p class="date" id="time-nawabari-first-stage"></p>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-nawabari-first-stage-one" alt="ステージ">
+              <p class="stage-name" id="nawabari-first-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-nawabari-first-stage-two" alt="ステージ">
+              <p class="stage-name" id="nawabari-first-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Second">
+          <p class="date" id="time-nawabari-second-stage"></p>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-nawabari-second-stage-one" alt="ステージ">
+              <p class="stage-name" id="nawabari-second-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-nawabari-second-stage-two" alt="ステージ">
+              <p class="stage-name" id="nawabari-second-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Third">
+          <p class="date" id="time-nawabari-third-stage"></p>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-nawabari-third-stage-one" alt="ステージ">
+              <p class="stage-name" id="nawabari-third-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-nawabari-third-stage-two" alt="ステージ">
+              <p class="stage-name" id="nawabari-third-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Forth">
+          <p class="date" id="time-nawabari-forth-stage"></p>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-nawabari-forth-stage-one" alt="ステージ">
+              <p class="stage-name" id="nawabari-forth-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-nawabari-forth-stage-two" alt="ステージ">
+              <p class="stage-name" id="nawabari-forth-stage-two"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ガチマッチ -->
+    <div class="gachi">
+      <div class="mode">
+        <h2><span class="title">Gachi Match</span></h2>
+        <img src="./image/rule/gachi.png" alt="gachi">
+      </div>
+      <!-- ステージ情報 -->
+      <div class="info">
+        <div class="First">
+          <div class="time-rule">
+            <p class="date" id="time-gachi-first-stage"></p>
+            <div class="rule">
+              <p id="gachi-rule-first"></p>
+              <img id="img-gachi-rule-first" alt="rule">
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-gachi-first-stage-one" alt="ステージ">
+              <p class="stage-name" id="gachi-first-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-gachi-first-stage-two" alt="ステージ">
+              <p class="stage-name" id="gachi-first-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Second">
+          <div class="time-rule">
+            <p class="date" id="time-gachi-second-stage"></p>
+            <div class="rule">
+              <p id="gachi-rule-second"></p>
+              <img id="img-gachi-rule-second" alt="rule">
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-gachi-second-stage-one" alt="ステージ">
+              <p class="stage-name" id="gachi-second-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-gachi-second-stage-two" alt="ステージ">
+              <p class="stage-name" id="gachi-second-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Third">
+          <div class="time-rule">
+            <p class="date" id="time-gachi-third-stage"></p>
+            <div class="rule">
+              <p id="gachi-rule-third"></p>
+              <img id="img-gachi-rule-third" alt="rule">
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-gachi-third-stage-one" alt="ステージ">
+              <p class="stage-name" id="gachi-third-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-gachi-third-stage-two" alt="ステージ">
+              <p class="stage-name" id="gachi-third-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Forth">
+          <div class="time-rule">
+            <p class="date" id="time-gachi-forth-stage"></p>
+            <div class="rule">
+              <p id="gachi-rule-forth"></p>
+              <img id="img-gachi-rule-forth" alt="rule">
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-gachi-forth-stage-one" alt="ステージ">
+              <p class="stage-name" id="gachi-forth-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-gachi-forth-stage-two" alt="ステージ">
+              <p class="stage-name" id="gachi-forth-stage-two"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- リーグマッチ -->
+    <div class="league">
+      <div class="mode">
+        <h2><span class="title">League Match</span></h2>
+        <img src="./image/rule/league.png" alt="league">
+      </div>
+      <!-- ステージ情報 -->
+      <div class="info">
+        <div class="First">
+          <div class="time-rule">
+            <p class="date" id="time-league-first-stage"></p>
+            <div class="rule">
+              <p id="league-rule-first"></p>
+              <img id="img-league-rule-first" alt="rule">
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-league-first-stage-one" alt="ステージ">
+              <p class="stage-name" id="league-first-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-league-first-stage-two" alt="ステージ">
+              <p class="stage-name" id="league-first-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Second">
+          <div class="time-rule">
+            <p class="date" id="time-league-second-stage"></p>
+            <div class="rule">
+              <p id="league-rule-second"></p>
+              <img id="img-league-rule-second" alt="rule">
+            </div>  
+          </div>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-league-second-stage-one" alt="ステージ">
+              <p class="stage-name" id="league-second-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-league-second-stage-two" alt="ステージ">
+              <p class="stage-name" id="league-second-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Third">
+          <div class="time-rule">
+            <p class="date" id="time-league-third-stage"></p>
+            <div class="rule">
+              <p id="league-rule-third"></p>
+              <img id="img-league-rule-third" alt="rule">
+            </div>  
+          </div>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-league-third-stage-one" alt="ステージ">
+              <p class="stage-name" id="league-third-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-league-third-stage-two" alt="ステージ">
+              <p class="stage-name" id="league-third-stage-two"></p>
+            </div>
+          </div>
+        </div>
+        <div class="Forth">
+          <div class="time-rule">
+            <p class="date" id="time-league-forth-stage"></p>
+            <div class="rule">
+              <p id="league-rule-forth"></p>
+              <img id="img-league-rule-forth" alt="rule">
+            </div>
+          </div>
+          <div class="stage">
+            <div class="stage-One">
+              <img class="stage-img" id="img-league-forth-stage-one" alt="ステージ">
+              <p class="stage-name" id="league-forth-stage-one"></p>
+            </div>
+            <div class="stage-Two">
+              <img class="stage-img" id="img-league-forth-stage-two" alt="ステージ">
+              <p class="stage-name" id="league-forth-stage-two"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <!-- ver.1.1.0 ではコメントアウト -->
+    <!-- <a class="footer-logo" href="./index.html"> -->
+    <a class="footer-logo" href="./Match.html">
+      <img src="./image/common/footer-icon.png" alt="Splatesy">
+    </a>
+    <nav class="site-menu">
+      <ul>
+        <!-- ver.1.1.0 ではコメントアウト -->
+        <!-- <li><a href="./spatesy.html">Splatesy</a></li>
+        <li><a href="./Match.html">Online<br>Schedule</a></li>
+        <li><a href="./Salmon.html">Salmon<br>Run</a></li>
+        <li><a href="./gesotown.html">Geso<br>Town</a></li>
+        <li><a onclick="pop_up();">Splatesy</a></li> -->
+        <li><a onclick="pop_up();">Splatesy</a></li>
+        <li><a href="./Match.html">Online<br>Schedule</a></li>
+        <li><a onclick="pop_up();">Salmon<br>Run</a></li>
+        <li><a onclick="pop_up();">Geso<br>Town</a></li>
+      </ul>
+    </nav>
+
+    <p class="footer-edit-date">Edit:2022-02</p>
+    <p class="copyright"><small>&copy;Metty</small></p>
+  </footer>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/match.js"></script>
+  <script src="./js/pop-up.js"></script>
+</body>
+</html>

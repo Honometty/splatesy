@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+.first-view-title {
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  font-size: 23px;
+}
+
+.mode {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mode img {
+  height: 60px;
+  padding-left: 10px;
+}
+
+.nawabari .mode .title {
+  background-color: #00FF99;
+  border-radius: 24px;
+  padding: 5px 15px 5px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.gachi .mode .title {
+  background-color: #FF9966;
+  border-radius: 24px;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.league .mode .title {
+  background-color: #FF99CC;
+  border-radius: 24px;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.info {
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  font-weight: bold;
+}
+
+.date {
+  text-align: center;
+  font-size: 20px;
+}
+
+.rule {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'M PLUS 1 Code', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.rule img {
+  height: 50px;
+  padding-left: 5px;
+}
+
+.time-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.stage-name {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 5px;
+  font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.First {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.Second {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.Third {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.Forth {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.stage-One {
+  padding-right: 10px;
+}
